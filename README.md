@@ -1,11 +1,11 @@
 
-Tutorial from https://github.com/jtr13/bookdown-template (https://www.youtube.com/watch?v=m5D-yoH416Y&t=96s)
+Manual : https://bookdown.org/yihui/bookdown/
 
-You can find the preview of this example at https://bookdown.org/yihui/bookdown-demo/.
+Demo from git https://github.com/rstudio/bookdown : https://bookdown.org/yihui/bookdown-demo/
 
-* bookdown::render_book("index.rmd")
+GitPages tutorial https://github.com/jtr13/bookdown-template : https://www.youtube.com/watch?v=m5D-yoH416Y&t=96s 
 
-* browseURL("docs/index.html") 
+
 
 
 

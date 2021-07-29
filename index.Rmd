@@ -52,6 +52,11 @@ browseURL("docs/index.html")
 
 # commit to git
 
+...
+
+
+# open up repo
+
 ```
 usethis::browse_github() 
 ```
