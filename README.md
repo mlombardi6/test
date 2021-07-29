@@ -3,9 +3,6 @@ Tutorial from https://github.com/jtr13/bookdown-template (https://www.youtube.co
 
 You can find the preview of this example at https://bookdown.org/yihui/bookdown-demo/.
 
-* bookdown::render_book("index.rmd")
-
-* browseURL("docs/index.html") 
 
 
 
