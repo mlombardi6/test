@@ -1,5 +1,8 @@
-book_filename: "demo1"
+book_filename: "test"
+output_dir: "docs"
+delete_merged_file: true
+edit: https://github.com/mlombardi6/test/edit/master/%s
+view: https://github.com/mlombardi6/test/blob/master/%s
 language:
   ui:
     chapter_name: "Chapter "
-delete_merged_file: true

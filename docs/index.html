@@ -5,26 +5,26 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>A Minimal Book Example</title>
-  <meta name="description" content="This is a minimal example." />
+  <meta name="description" content="A Minimal Book Example" />
   <meta name="generator" content="bookdown 0.22.15 and GitBook 2.6.7" />
 
   <meta property="og:title" content="A Minimal Book Example" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is a minimal example." />
-  <meta name="github-repo" content="rstudio/demo" />
+  
+  
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="A Minimal Book Example" />
   
-  <meta name="twitter:description" content="This is a minimal example." />
+  
   
 
 <meta name="author" content="Marco Lombardi" />
 
 
-<meta name="date" content="2021-07-28" />
+<meta name="date" content="2021-07-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 
-<link rel="next" href="intro.html"/>
+<link rel="next" href="data.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -73,12 +73,16 @@
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Data</a></li>
-<li class="chapter" data-level="4" data-path="model.html"><a href="model.html"><i class="fa fa-check"></i><b>4</b> Model</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Settings</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#bookdown.yml"><i class="fa fa-check"></i><b>1.1</b> bookdown.yml</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#output.yml"><i class="fa fa-check"></i><b>1.2</b> output.yml</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#build-book"><i class="fa fa-check"></i><b>1.3</b> Build book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a></li>
+<li class="chapter" data-level="3" data-path="model.html"><a href="model.html"><i class="fa fa-check"></i><b>3</b> Model</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/mlombardi6/dev" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/mlombardi6/dev" target="blank">github.com/mlombardi6</a></li>
 
 </ul>
 
@@ -100,11 +104,48 @@
 <div id="header">
 <h1 class="title">A Minimal Book Example</h1>
 <p class="author"><em>Marco Lombardi</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-07-28</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2021-07-29</em></p>
 </div>
-<div id="overview" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Overview</h1>
+<div id="settings" class="section level1" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Settings</h1>
+<div id="bookdown.yml" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> bookdown.yml</h2>
+<pre><code>book_filename: &quot;test&quot;
+output_dir: &quot;docs&quot;
+delete_merged_file: true
+edit: https://github.com/mlombardi6/test/edit/master/%s
+view: https://github.com/mlombardi6/test/blob/master/%s
+language:
+  ui:
+    chapter_name: &quot;Chapter &quot;</code></pre>
+</div>
+<div id="output.yml" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> output.yml</h2>
+<pre><code>bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        &lt;li&gt;&lt;a href=&quot;./&quot;&gt;A Minimal Book Example&lt;/a&gt;&lt;/li&gt;
+      after: |
+        &lt;li&gt;&lt;a href=&quot;https://github.com/mlombardi6/dev&quot; target=&quot;blank&quot;&gt;Published with bookdown&lt;/a&gt;&lt;/li&gt;
+    edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
+    download: [&quot;pdf&quot;, &quot;epub&quot;]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default
+bookdown::bs4_book: default</code></pre>
+</div>
+<div id="build-book" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Build book</h2>
+<pre><code>bookdown::render_book(&quot;index.rmd&quot;)
+browseURL(&quot;docs/index.html&quot;)</code></pre>
 
+</div>
 </div>
             </section>
 
@@ -112,7 +153,7 @@
         </div>
       </div>
 
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -152,10 +193,10 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": null,
+"link": "https://github.com/mlombardi6/test/blob/master/index.Rmd",
 "text": null
 },
-"download": ["demo1.pdf", "demo1.epub"],
+"download": ["test.pdf", "test.epub"],
 "search": {
 "engine": "lunr",
 "options": null
