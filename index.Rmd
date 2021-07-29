@@ -50,4 +50,11 @@ bookdown::render_book("index.rmd")
 browseURL("docs/index.html")
 ```
 
+# commit to git
+
+```
+usethis::browse_github() 
+```
+
+
 
